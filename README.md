@@ -29,7 +29,8 @@ npm install axios
 
 **Updating Website and Hosting**
 This website is being hosted through **surge**.  
-To run:  
+
+To run:
 1. make sure surge is installed. if not, run `npm install --global surge`  
 2. navigate to the main project folder and open it in terminal. type `npm run build`  
 3. go into the new build folder in the terminal and type `surge`  
