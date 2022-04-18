@@ -40,7 +40,7 @@ To run:
 Troubleshooting:  
 If on mac and the `npm` commands are not running, make sure to type `sudo` in front of the commands to run as an administrator.  
 
-Previous Website Versions:
+Previous Website Versions:  
 https://usc-for-ukraine.surge.sh/  
 http://spaceneko.ai:3000/  
 
