@@ -27,8 +27,8 @@ npm install react react-dom
 npm install axios
 ```   
 
-**Updating Website and Hosting**
-This website is being hosted through **surge**.  
+**Updating Website and Hosting**  
+This website is being hosted through **surge**
 
 To run:
 1. make sure surge is installed. if not, run `npm install --global surge`  
