@@ -13,7 +13,7 @@ Astha Mishra
 Zhenghan Fang  
 Yaxi Liu  
 
-Website Link: https://usc-for-ukraine.surge.sh/  
+Website Link: https://usc-ukraine.surge.sh/ 
 
 # Developer Notes: 
 **Installing Packages:**  
@@ -26,3 +26,14 @@ npm install semantic-ui-react semantic-ui-css
 npm install react react-dom
 npm install axios
 ```   
+
+**Updating Website and Hosting**
+This website is being hosted through **surge**.  
+To run:  
+1. make sure surge is installed. if not, run `npm install --global surge`  
+2. navigate to the main project folder and open it in terminal. type `npm run build`  
+3. go into the new build folder in the terminal and type `surge`  
+4. feel free to change the domain and press enter to deploy  
+
+Troubleshooting:  
+If on mac and the `npm` commands are not running, make sure to type `sudo` in front of the commands to run as an administrator.
