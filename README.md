@@ -44,3 +44,6 @@ Previous Website Versions:
 https://usc-for-ukraine.surge.sh/  
 http://spaceneko.ai:3000/  
 
+**Additional Resources**
+website layout / template: https://docs.google.com/document/d/1hPVXmavBPjPj-Dc9B2fqhbqk3TKH_J2Lqhf9tGTKgIE/edit
+interest form database: https://docs.google.com/spreadsheets/d/1Hd2pGL9FmZwz3PDPxgNivJxjx_rFzq0HpKY0wp_aS7s/edit#gid=0
