@@ -19,6 +19,25 @@ class InterestForm extends React.Component {
             Message: ''
         }
     }
+    // VALIDATION
+    handleValidation() {
+        let fields = this.state;
+        let formIsValid = true;
+
+        if(!fields["Name"] ||
+            !fields["Email"] ||
+            !fields["CurrentResidence"] ||
+            !fields["CurrentInstitution"] ||
+            !fields["Position"] ||
+            !fields["Interest"] ||
+            !fields["USCDepartment"] ||
+            !fields["Message"] ) 
+        {
+            formIsValid = false;
+        }
+        
+        return formIsValid;
+    }
 
     // SUBMIT HANDLERS
     changeHandler = (e) => {
@@ -27,6 +46,10 @@ class InterestForm extends React.Component {
     submitHandler = e => {
         e.preventDefault();
         console.log(this.state);
+
+        if(this.handleValidation()) {
+            alert("Your form has been submitted. A representative from USC will get back to you shortly.")
+        }
 
         axios.post('https://sheet.best/api/sheets/a185bc92-03fa-4be4-a316-a8a46ddd9e6f', this.state)
         .then(response => {
@@ -42,6 +65,7 @@ class InterestForm extends React.Component {
                 console.log(error.message)
             }
         })
+
         this.setState ({
             Name: '',
             Email: '',
@@ -74,12 +98,12 @@ class InterestForm extends React.Component {
                 </Form.Field>
                 <Form.Field className="form-field">
                     <label>Current or most recent affiliation (institution)</label><br />
-                    <input placeholder='Institution' type="text" name="CurrentInstitution" value={CurrentInstitution} onChange={this.changeHandler} required/>
+                    <input placeholder='Institution' type="text" name="CurrentInstitution" value={CurrentInstitution} onChange={this.changeHandler} required />
                 </Form.Field>
 
                 <Form.Field className="form-field">
                     <label>Current position</label><br />
-                    <select value={Position} name="Position" onChange={this.changeHandler} type="select" class="position" required>
+                    <select value={Position} name="Position" onChange={this.changeHandler} type="select" class="position" required >
                         <option value="">Select a Position</option>
                         <option value="faculty">Faculty</option>
                         <option value="postDoc">PostDoctorate</option>
@@ -96,13 +120,13 @@ class InterestForm extends React.Component {
                 </Form.Field>
                 <Form.Field className="form-field">
                     <label>Your primary choice of School/Department/Program at USC</label><br />
-                    <input placeholder='School/Department' type="text" name="USCDepartment" value={USCDepartment} onChange={this.changeHandler} required/>
+                    <input placeholder='School/Department' type="text" name="USCDepartment" value={USCDepartment} onChange={this.changeHandler} required />
                 </Form.Field>
                 <Form.Field className="form-field">
                     <label>Message</label><br />
                     <textarea rows="3" className="message-field" 
                         placeholder='Please tell us a little about yourself and what kinds of opportunities you are looking for. If you answered "None" or "Other" for any of the questions above, please explain here.' 
-                        type="textarea" name="Message" value={Message} onChange={this.changeHandler} required/>
+                        type="textarea" name="Message" value={Message} onChange={this.changeHandler} required />
                 </Form.Field>
                 
                 <Button className="submit-button" type='submit' >Submit</Button>

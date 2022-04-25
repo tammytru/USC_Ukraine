@@ -1,8 +1,13 @@
 import logo from './usc-logo.png';
 import logo_mobile from './usc-logo-mobile.png';
+import undergrad from './undergrad.png';
+import grad from './grad.png';
+import phd from './doctoral.png';
+import postdoc from './postdoc.png'
 import './App.css';
 import 'react-dropdown/style.css';
 import InterestForm from './interestForm.js';
+// import Testing from './formTest';
 
 function App() {
   return (
@@ -54,8 +59,8 @@ function App() {
           <table>
             <tr>
               <td class='table-program-pic'><p>
-                <img src='./undergrad.png' 
-                alt='Undergraduate Program'></img></p>
+                <img src={undergrad} 
+                alt='Undergraduate Program' class="img-fluid"></img></p>
               </td>
               <td>
                 <p className='table-program-text'>
@@ -67,8 +72,8 @@ function App() {
 
             <tr>
               <td class='table-program-pic'>
-                <p><img src='grad.png' 
-                alt='Graduate Program'></img></p>
+                <p><img src={grad} 
+                alt='Graduate Program' class="img-fluid"></img></p>
               </td>
               <td>
                 <p className='table-program-text'>
@@ -82,8 +87,8 @@ function App() {
 
             <tr>
               <td class='table-program-pic'>
-                <p><img src='doctoral.png' 
-                alt='PhD Program'></img></p>
+                <p><img src={phd} 
+                alt='PhD Program' class="img-fluid"></img></p>
               </td>
               <td>
                 <p className='table-program-text'>
@@ -99,8 +104,8 @@ function App() {
 
             <tr>
               <td class='table-program-pic'>
-                <p><img src='postdoc.png' 
-                alt='Postdoc and Visitng Faculty Programs'></img></p>
+                <p><img src={postdoc} 
+                alt='Postdoc and Visitng Faculty Programs' class="img-fluid"></img></p>
               </td>
               <td>
                 <p className='table-program-text'>
@@ -113,9 +118,12 @@ function App() {
             </tr>
           </table>
           {/* ------------ INTEREST FORM SECTION ------------ */}
-          <h4 class="form-header mt-4" id="interest-form-link">Interest Form</h4>
+          <h4 class="form-header" id="interest-form-link">Interest Form</h4>
           <InterestForm></InterestForm>
-          {/* <p>Click <a href="#">here</a> for Non-USC Opportunities Suitable for Ukrainian Scholars/Students</p> */}
+
+          {/* <h4 class="form-header" id="interest-form-link">TEST TEST</h4>
+          <Testing></Testing> */}
+
         </div>
 
         {/* ------------ CURRENT OPENINGS SECTION ------------ */}
